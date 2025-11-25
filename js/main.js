@@ -117,7 +117,7 @@ class EmpezarAutoBatalla {
     this.guerreros.push(new Mago("Orko"));
     this.guerreros.push(new Arquero("Robin hood"));
 
-    console.log("== Guerra a muerte ==");
+    console.log("== Participantes ==");
     this.guerreros.forEach(p =>
       console.log(
         "Nombre: " +
@@ -132,14 +132,14 @@ class EmpezarAutoBatalla {
           p.spd
       )
     );
-    console.log("\n");
+    console.log("--------------------------\n");
   }
 
   empezarBatalla() {
     let ronda = 1;
 
     while (this.guerreros.length > 1) {
-      console.log("\nRonda " + ronda );
+      console.log("\n=== Ronda " + ronda + " ===" );
 
       this.guerreros.sort((a, b) => b.spd - a.spd);
 
