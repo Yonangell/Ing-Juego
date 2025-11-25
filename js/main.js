@@ -92,7 +92,7 @@ class Arquero extends Personajes {
         modificador: 1.3,
       },
       {
-        nombre: "Flecha relanpago",
+        nombre: "Flecha relampago",
         modificador: 1.6,
       },
       {
@@ -117,18 +117,18 @@ class EmpezarAutoBatalla {
     this.guerreros.push(new Mago("Orko"));
     this.guerreros.push(new Arquero("Robin hood"));
 
-    console.log("Los guerreros iniciales");
+    console.log("== Guerra a muerte ==");
     this.guerreros.forEach(p =>
       console.log(
         "Nombre: " +
           p.nombre +
-          " Puntos de vida: " +
+          ". Puntos de vida: " +
           p.hp +
-          " Ataque: " +
+          ", Ataque: " +
           p.atk +
-          " Defensa: " +
+          ", Defensa: " +
           p.def +
-          " Velocidad: " +
+          ", Velocidad: " +
           p.spd
       )
     );
@@ -139,7 +139,7 @@ class EmpezarAutoBatalla {
     let ronda = 1;
 
     while (this.guerreros.length > 1) {
-      console.log("\nRonda " + ronda + "==");
+      console.log("\nRonda " + ronda );
 
       this.guerreros.sort((a, b) => b.spd - a.spd);
 
